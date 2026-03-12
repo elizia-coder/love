@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts Collector Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0e68c;
+        }
+        #game {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ff69b4;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        #hearts {
+            font-size: 50px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <div id="hearts">💖💖💖💖💖</div>
+        <button onclick="collectHearts()">Collect Hearts!</button>
+        <div id="score">Score: 0</div>
+    </div>
+    <script>
+        let score = 0;
+        function collectHearts() {
+            score++;
+            document.getElementById('score').innerText = 'Score: ' + score;
+            // Randomly alter hearts display
+            const hearts = '💖'.repeat(Math.floor(Math.random() * 6));
+            document.getElementById('hearts').innerText = hearts;
+        }
+    </script>
+</body>
+</html>
