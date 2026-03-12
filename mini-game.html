@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        #game { margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Happy Anniversary, Daniel!</h1>
+    <p>Click the button to reveal a special message:</p>
+    <div id="game">
+        <button onclick="revealMessage()">Click me!</button>
+        <p id="message" style="display:none;color:green;"></p>
+    </div>
+    <script>
+        function revealMessage() {
+            document.getElementById('message').innerText = 'Happy Anniversary! You are my everything! ❤️';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
